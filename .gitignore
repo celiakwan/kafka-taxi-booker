@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+/.idea
+/.tox
+/.vscode
+/PyMySQL.egg-info
+/build
+/dist
+__pycache__

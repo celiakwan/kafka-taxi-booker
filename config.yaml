@@ -1,0 +1,21 @@
+appName: kafka-taxi-booker
+
+database:
+  host: 127.0.0.1
+  port: 3306
+  user: user
+  password: password
+  dbName: taxi_booker
+
+kafka:
+  host: localhost
+  port: 9092
+  taxiPositionTopic: taxi-position
+  passengerPositionTopic: passenger-position
+  searchResultTopic: search-result
+
+generator:
+  totalTaxi: 100
+  passengerPerTimeSlot: 80
+  # In seconds
+  duration: 60
