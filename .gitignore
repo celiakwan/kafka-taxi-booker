@@ -1,5 +1,6 @@
 *.pyc
 *.pyo
+*.log
 /.idea
 /.tox
 /.vscode
@@ -7,3 +8,4 @@
 /build
 /dist
 __pycache__
+.DS_Store/

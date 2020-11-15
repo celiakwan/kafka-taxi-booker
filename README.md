@@ -7,15 +7,30 @@ An application built with Python and Kafka connecting to MySQL to simulate how t
 - [MySQL](https://www.mysql.com/): 8.0.21
 
 ### Installation
+Install Python 3.
+```
+brew install python
+```
+
+Install MySQL.
+```
+brew install mysql
+```
+
 Install the required Python packages in this project.
 ```
 pip3 install -r requirements.txt
 ```
 
 ### Database
-Connect to MySQL and run the SQL commands in `sql_script/init.sql` to create the database `taxi_booker` and the table `taxi_position`.
+Connect to MySQL,
+```
+mysql -u root
+```
 
-### Kafka Environment
+and run the SQL commands in `sql_script/init.sql` to create the database `taxi_booker` and the table `taxi_position`.
+
+### Kafka
 Start a ZooKeeper server.
 ```
 ./bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -54,10 +69,10 @@ Environment configuration for this project is available in `config.yaml`.
 ### Get Started
 Run the application.
 ```
-/usr/local/bin/python3 -m src.main
+python3 -m src.main
 ```
 
 Run the message generator to simulate messages sent from client devices.
 ```
-/usr/local/bin/python3 -m src.mock.generator
+python3 -m src.mock.generator
 ```
